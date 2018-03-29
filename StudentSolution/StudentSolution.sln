@@ -3,18 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27520.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.- ServiceLayer", "ServiceLayer\3.- ServiceLayer.csproj", "{70CF2F6B-2533-47AD-845F-5B2E5AC17615}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.- ServiceLayer", "ServiceLayer\3.- ServiceLayer.csproj", "{70CF2F6B-2533-47AD-845F-5B2E5AC17615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.- BusinessRuleLayer", "BusinessRuleLayer\1.- BusinessRuleLayer.csproj", "{1A141345-0539-49ED-A526-5936FF81A0FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.- BusinessRuleLayer", "BusinessRuleLayer\1.- BusinessRuleLayer.csproj", "{1A141345-0539-49ED-A526-5936FF81A0FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.- ImplementationBusinessRuleLayer", "ImplementationBusinessRuleLayer\2.- ImplementationBusinessRuleLayer.csproj", "{7DCEE240-83AA-40F7-ACF9-8F39ACAC9788}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.- ImplementationBusinessRuleLayer", "ImplementationBusinessRuleLayer\2.- ImplementationBusinessRuleLayer.csproj", "{7DCEE240-83AA-40F7-ACF9-8F39ACAC9788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.- ExecutionLayer", "ExecutionLayer\4.- ExecutionLayer.csproj", "{BB9A5BBF-F692-429B-ACEF-AD4B968DD921}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.- ExecutionLayer", "ExecutionLayer\4.- ExecutionLayer.csproj", "{BB9A5BBF-F692-429B-ACEF-AD4B968DD921}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6906511C-6D6B-401C-AC4F-09271D57C138}"
 	ProjectSection(SolutionItems) = preProject
 		Leame.txt = Leame.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayerTest", "ServiceLayerTest\ServiceLayerTest.csproj", "{2CF82262-49D1-407E-A80E-0C7C96C526C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{BB9A5BBF-F692-429B-ACEF-AD4B968DD921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB9A5BBF-F692-429B-ACEF-AD4B968DD921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB9A5BBF-F692-429B-ACEF-AD4B968DD921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF82262-49D1-407E-A80E-0C7C96C526C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF82262-49D1-407E-A80E-0C7C96C526C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF82262-49D1-407E-A80E-0C7C96C526C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF82262-49D1-407E-A80E-0C7C96C526C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
