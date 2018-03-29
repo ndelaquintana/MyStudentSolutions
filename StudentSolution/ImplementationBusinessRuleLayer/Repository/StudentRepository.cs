@@ -14,10 +14,10 @@ namespace StudentSolution
         #endregion
 
         #region Implementación singleton...
-        static StudentRepository _instance = new StudentRepository();
+        static Lazy<StudentRepository> _instance = new Lazy<StudentRepository>(()=>new StudentRepository());
         private StudentRepository() { }
         #endregion
-        public static StudentRepository Instance => _instance;
+        public static StudentRepository Instance => _instance.Value;
 
         #region Métodos (publicos)...
         public void Clear()
