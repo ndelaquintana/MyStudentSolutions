@@ -1,6 +1,8 @@
 1.	Se creo una solución con cuatra capas en la que las capas superiores dependen unidcamente de capas que estan por abajo.
-2.	La capa BusinessRuleLayer es la capa que contiene las abstracciones (entidades e interfaces) del negocio y se puede compartir para incluirse en proyectos que hagan uso de las reglas del negocio. Se asume que las entidades no tiene caracteristicas de codigo y estructura que deban protegerse.
+			BusinessRuleLayer es la capa que contiene las abstracciones (entidades e interfaces) del negocio y se puede compartir para incluirse en proyectos que hagan uso de las reglas del negocio. Se asume que las entidades no tiene caracteristicas de codigo y estructura que deban protegerse.
+			ServiveLayer contiene la funcionalidad ofrecida usa un patron Facade para exponer
 3.	La concurrencia en las altas y bajas se maneja usando un colección concurrente.
 4.	La concurrencia en las consultas se majeja estableciendo un bloqueo miestras se extrae los resultados en una lista auxiliar, no se ordena los resultados al momento de extraerlos, al momento de preparar los resultados y cuando ya existen bloqueos recien se ordena los datos.
 5.	La aplicación asume que la clave primaria es StudentName y no permite duplicados.
 6.  Como solo existe una instancia de la lista de estudiante la clase StudentRepository que contiene esta lista es un singleton.
+4.-	El singleton es de carga diferida y seguro par subprocesos.

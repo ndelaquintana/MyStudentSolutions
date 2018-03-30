@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="StudentSolution.SearchByStudentNameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudentSolution"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <local:SearchByStudentNameViewModel x:Name="_viewModel"/>
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox VerticalAlignment="Top" Width="100" Text="{Binding StudentName, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Content="Sarch" Width="70" VerticalAlignment="Top" Margin="4,0,0,0" Command="{Binding SearchCommand}"/>
+        </StackPanel>
+
+        <Grid 
+              HorizontalAlignment="Center" 
+              VerticalAlignment="Top" 
+              Grid.Row="1"
+              Visibility="{Binding IsExecutedSearch, Converter={StaticResource BoolToVis}, Mode=OneWay}" 
+              Background="Coral">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Type"/>
+            <Label Content="Name" Grid.Row="1"/>
+            <Label Content="Gender" Grid.Row="2"/>
+            <Label Content="TimeStap" Grid.Row="3"/>
+
+            <TextBox Text="{Binding Student.StudentType}" Grid.Row ="0" Grid.Column="1" IsEnabled="False"/>
+            <TextBox Text="{Binding Student.StudentName}" Grid.Row ="1" Grid.Column="1" IsEnabled="False"/>
+            <TextBox Text="{Binding Student.Gender}" Grid.Row ="2" Grid.Column="1" IsEnabled="False"/>
+            <TextBox Text="{Binding Student.TimeStamp}" Grid.Row ="3" Grid.Column="1" IsEnabled="False"/>
+
+        </Grid>
+
+    </Grid>
+</UserControl>
